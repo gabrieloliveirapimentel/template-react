@@ -1,54 +1,81 @@
-# React + TypeScript + Vite
+# Template React com Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um template básico para iniciar um aplicativo React utilizando o Vite.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esse template foi criado com as seguintes ferramentas e versões:
+- [Node.js](https://nodejs.org/) (versão 18.19.1)
+- [npm](https://www.npmjs.com/) (versão 10.2.4)
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Siga os passos abaixo para configurar o projeto:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+**Clone o repositório:**
+  ```bash
+  git clone https://github.com/gabrieloliveirapimentel/template-react.git
+  cd template-react
+  ```
+
+**Instale as dependências:**
+  Usando npm:
+  ```bash
+  npm install
+  ```
+  Ou usando yarn:
+  ```bash
+  yarn
+  ```
+
+**Inicie o servidor de desenvolvimento:**
+  Usando npm:
+  ```bash
+  npm run dev
+  ```
+  Ou usando yarn:
+  ```bash
+  yarn dev
+  ```
+
+**Acesse a aplicação:**
+  Abra o navegador e acesse [http://localhost:3001](http://localhost:3001).
+
+## Estrutura do Projeto
+
+```bash
+- src/: Contém os arquivos principais do projeto.
+  -- assets/: Pasta para ser inserido as mídias do projeto
+  -- pages/: Pasta com as páginas do projeto
+  --- Home/: Página inicial do projeto
+  ---- index.tsx: Arquivo da tela inicial
+  ---- styles.ts: Arquivo para estilização da tela inicial 
+  main.tsx: Ponto de entrada da aplicação.
+  App.tsx: Componente principal.
+- public/: Arquivos estáticos.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Criando um Novo Projeto com Vite
+Se você deseja criar um novo projeto do zero, siga estas etapas:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Crie o projeto:**
+  ```bash
+  npm create vite@latest
+  ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Nessa etapa é solicitado o nome do projeto, framework (React) e a variação (Typescript).
+
+**Dê um nome para seu projeto o diretório do projeto:**
+  ```bash
+  cd nome-do-projeto
+  ```
+
+**Instale as dependências e inicie o servidor:**
+  ```bash
+  npm install
+  npm run dev
+  ```
+
+## Referências
+- [Documentação do React](https://reactjs.org/)
+- [Documentação do Vite](https://vitejs.dev/)
