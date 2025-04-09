@@ -1,6 +1,6 @@
 # Template React com Vite
 
-Este projeto é um template básico para iniciar um aplicativo React utilizando o Vite.
+Este projeto é um template básico com Tailwind para iniciar um aplicativo React utilizando o Vite.
 
 ## Pré-requisitos
 
